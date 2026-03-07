@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<title>我的履歷</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background-color:#f4f6f8;
+    margin:0;
+    padding:0;
+}
+
+.container{
+    width:800px;
+    margin:40px auto;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+h1{
+    color:#2c3e50;
+}
+
+.section{
+    margin-top:25px;
+}
+
+.section h2{
+    border-bottom:2px solid #3498db;
+    padding-bottom:5px;
+    color:#3498db;
+}
+
+button{
+    margin-top:10px;
+    padding:8px 15px;
+    border:none;
+    background:#3498db;
+    color:white;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#2980b9;
+}
+
+#contact{
+    display:none;
+    margin-top:10px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>個人履歷</h1>
+<p><strong>學號：</strong>114022017</p>
+
+<div class="section">
+<h2>基本資料</h2>
+<p>姓名：陳柏銨</p>
+<p>學校：亞洲大學</p>
+<p>科系：人工智慧學系</p>
+</div>
+
+<div class="section">
+<h2>技能</h2>
+<ul>
+<li>HTML</li>
+<li>CSS</li>
+<li>JavaScript</li>
+<li>Python</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>經歷</h2>
+<ul>
+<li>2024 - 網頁設計課程專案</li>
+<li>2025 - 參加程式設計競賽</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>聯絡方式</h2>
+<button onclick="showContact()">顯示聯絡資訊</button>
+<p id="contact">
+Email: student@email.com<br>
+Phone: 0912-345-678
+</p>
+</div>
+
+</div>
+
+<script>
+function showContact(){
+    var contact = document.getElementById("contact");
+
+    if(contact.style.display === "none"){
+        contact.style.display = "block";
+    }else{
+        contact.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>
