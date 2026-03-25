@@ -113,15 +113,14 @@ body{
 }
 
 /* 斜切 */
-.main::before{
-    content:"";
-    position:absolute;
-    left:-120px;
-    top:0;
-    width:200px;
-    height:100%;
+.main{
+    width:65%;
     background:#f9fafc;
-    transform:skewX(-20deg);
+    padding:50px;
+    position:relative;
+
+    /* 關鍵：斜切 */
+    clip-path: polygon(8% 0, 100% 0, 100% 100%, 0% 100%);
 }
 
 /* 卡片 */
