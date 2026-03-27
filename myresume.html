@@ -163,7 +163,19 @@ body{
     font-size:14px;
     color:#555;
 }
-
+.music-player{
+    margin-top:25px;
+    text-align:center;
+}
+.music-btn{
+    background:rgba(255,255,255,0.15);
+    border:none;
+    color:white;
+    padding:10px 18px;
+    border-radius:25px;
+    cursor:pointer;
+    font-size:14px;
+}
 </style>
 </head>
 
@@ -220,7 +232,14 @@ body{
 </div>
 
 </div>
+<div class="line"></div>
 
+<div class="music-player">
+    <button class="music-btn" onclick="toggleMusic()">
+        <i class="fa-solid fa-music"></i> 播放背景音樂
+    </button>
+    <audio id="bgm" src="MUSIC.mp3"></audio>
+</div>
 <!-- 右側 -->
 <div class="main">
 
@@ -258,6 +277,19 @@ body{
 </div>
 
 </div>
+<script>
+const music = document.getElementById('bgm');
+const btn = document.querySelector('.music-btn');
 
+function toggleMusic(){
+    if(music.paused){
+        music.play();
+        btn.innerHTML = '<i class="fa-solid fa-pause"></i> 暫停音樂';
+    }else{
+        music.pause();
+        btn.innerHTML = '<i class="fa-solid fa-music"></i> 播放背景音樂';
+    }
+}
+</script>
 </body>
 </html>
