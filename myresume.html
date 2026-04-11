@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>陳柏銨｜履歷</title>
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
@@ -14,7 +15,7 @@ body{
     justify-content:center;
 }
 
-/* 🔒 固定整張履歷寬度 */
+/* 固定寬度 */
 .page{
     width:1100px;
     min-height:100vh;
@@ -22,7 +23,7 @@ body{
     box-shadow:0 0 40px rgba(0,0,0,0.15);
 }
 
-/* ===== 左側 ===== */
+/* 左側 */
 .sidebar{
     width:35%;
     background:linear-gradient(160deg,#2f3b52,#1c2536);
@@ -65,6 +66,7 @@ body{
 /* 技能 */
 .skill{ text-align:left; }
 .skill-bar{ margin:10px 0; }
+
 .bar{
     height:6px;
     background:rgba(255,255,255,0.2);
@@ -77,7 +79,7 @@ body{
     background:linear-gradient(90deg,#6dd5fa,#3498db);
 }
 
-/* 音樂按鈕升級 */
+/* 音樂 */
 .music button{
     margin-top:10px;
     padding:10px 18px;
@@ -90,7 +92,7 @@ body{
     width:100%;
 }
 
-/* ===== 右側 ===== */
+/* 右側 */
 .main{
     width:65%;
     background:#f9fafc;
@@ -123,7 +125,7 @@ body{
 
 .time{ font-size:13px; color:#888; }
 .title{ font-weight:bold; margin:5px 0; }
-.desc{ font-size:14px; color:#555; }
+.desc{ font-size:14px; color:#555; line-height:1.6; }
 </style>
 </head>
 
@@ -135,9 +137,11 @@ body{
 <div class="sidebar">
 
 <img src="me.jpg" class="profile">
+
 <div class="name">陳柏銨</div>
+
 <div style="font-size:13px;opacity:0.85;margin-top:6px;">
-前端網頁設計｜程式開發｜互動功能實作
+前端開發工程｜互動網站設計｜程式邏輯實作
 </div>
 
 <div>
@@ -148,11 +152,13 @@ body{
 
 <div class="line"></div>
 
+<!-- 音樂 -->
 <div class="music">
 <h3>背景音樂</h3>
 <button id="musicBtn" onclick="toggleMusic()">
 <i class="fa-solid fa-volume-xmark"></i> 開啟聲音
 </button>
+
 <audio id="bgm" autoplay loop muted>
 <source src="MUSIC.mp3" type="audio/mpeg">
 </audio>
@@ -160,6 +166,7 @@ body{
 
 <div class="line"></div>
 
+<!-- 聯絡 -->
 <div class="info">
 <p><i class="fa-solid fa-phone"></i>0912-345-678</p>
 <p><i class="fa-solid fa-envelope"></i>114022017@live.asia.edu.tw</p>
@@ -168,20 +175,25 @@ body{
 
 <div class="line"></div>
 
+<!-- 技能 -->
 <div class="skill">
 <h3>專業技能</h3>
+
 <div class="skill-bar">
-<span>HTML / CSS</span>
-<div class="bar"><div style="width:80%"></div></div>
+<span>HTML5 / CSS3 版型設計</span>
+<div class="bar"><div style="width:85%"></div></div>
 </div>
+
 <div class="skill-bar">
-<span>JavaScript</span>
+<span>JavaScript 互動開發</span>
+<div class="bar"><div style="width:75%"></div></div>
+</div>
+
+<div class="skill-bar">
+<span>Python 程式設計</span>
 <div class="bar"><div style="width:70%"></div></div>
 </div>
-<div class="skill-bar">
-<span>Python</span>
-<div class="bar"><div style="width:65%"></div></div>
-</div>
+
 </div>
 
 </div>
@@ -190,20 +202,19 @@ body{
 <div class="main">
 
 <div class="section">
-<h2>自我介紹</h2>
+<h2>Professional Summary</h2>
 <div class="item">
 <div class="desc">
-人工智慧學系，專注於前端網頁設計與程式開發實作。熟悉 HTML、CSS 與 JavaScript，能獨立完成響應式版型、互動功能與使用者體驗優化。
-
-在專題與課程實作中，曾完成個人履歷網站，過程中解決斜切版型跑版、排版錯位與瀏覽器自動播放限制等問題，培養了良好的問題分析與除錯能力。
-
-具備 Git 與 GitHub 版本控管經驗，能管理專案更新流程。對於將設計、美感與程式邏輯結合充滿興趣，期望持續精進前端開發與互動設計能力，朝專業前端工程師方向發展。
+具備前端網頁設計與互動功能開發能力，熟悉 HTML、CSS、JavaScript 與 Python 程式設計，
+能獨立完成網站版型規劃、UI 設計與功能實作。擅長問題分析、除錯與 Git 版本控管，
+目前就讀於亞洲大學人工智慧學系，持續精進網頁開發與系統設計能力。
 </div>
 </div>
 </div>
 
 <div class="section">
 <h2>教育經歷</h2>
+
 <div class="item">
 <div class="time">2024 - 至今</div>
 <div class="title">亞洲大學｜人工智慧學系</div>
@@ -220,14 +231,17 @@ body{
 </div>
 </div>
 
+</div>
+
 <div class="section">
 <h2>專案與實作經歷</h2>
+
 <div class="item">
 <div class="time">2024</div>
 <div class="title">個人履歷網站設計與開發</div>
 <div class="desc">
-自行設計版型與 UI，使用 HTML / CSS 製作響應式排版，
-並加入音樂播放器、互動按鈕與視覺動畫效果，完整實作前端開發流程。
+自行設計 UI 與版型結構，使用 HTML / CSS 完成整體頁面，
+並加入音樂播放器與互動按鈕，提升使用者體驗。
 </div>
 </div>
 
@@ -235,18 +249,20 @@ body{
 <div class="time">2025</div>
 <div class="title">音樂播放器互動功能實作</div>
 <div class="desc">
-使用 JavaScript 控制 audio 播放邏輯，處理瀏覽器自動播放限制，
-設計使用者可操作的聲音切換按鈕，提升網站互動體驗。
+使用 JavaScript 控制 audio 播放邏輯，解決瀏覽器自動播放限制，
+實作靜音切換與使用者互動控制。
 </div>
 </div>
 
 <div class="item">
 <div class="time">2025</div>
-<div class="title">GitHub 版本控管與網站部署</div>
+<div class="title">GitHub 版本控管實作</div>
 <div class="desc">
-使用 Git 進行版本控管，透過 GitHub 管理專案與網站更新流程，
-熟悉 commit、push 與專案維護。
+使用 Git 進行版本控制與專案管理，熟悉 commit、push 與更新流程，
+提升專案開發效率與協作能力。
 </div>
+</div>
+
 </div>
 
 </div>
