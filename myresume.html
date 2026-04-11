@@ -56,11 +56,11 @@ body{
 .line{
     height:1px;
     background:rgba(255,255,255,0.2);
-    margin:25px 0;
+    margin:20px 0;
 }
 
 .info{text-align:left;font-size:14px;}
-.info p{margin:12px 0;}
+.info p{margin:10px 0;}
 .info i{margin-right:10px;width:20px;}
 
 /* 技能 */
@@ -82,12 +82,11 @@ body{
 /* 嗜好 */
 .hobby{
     text-align:left;
-    margin-top:10px;
 }
 
 .hobby h3{
     font-size:16px;
-    margin-bottom:10px;
+    margin-bottom:8px;
 }
 
 .hobby ul{
@@ -95,17 +94,26 @@ body{
     padding-left:20px;
 }
 
-/* 音樂按鈕 */
+/* 🎵 音樂（縮小版） */
+.music{
+    text-align:left;
+}
+
+.music h3{
+    font-size:16px;
+    margin:0 0 8px 0;
+}
+
 .music button{
-    margin-top:10px;
-    padding:10px 18px;
+    padding:8px 12px;
     border:none;
-    border-radius:30px;
+    border-radius:20px;
     background:white;
     color:#2f3b52;
     font-weight:bold;
     cursor:pointer;
     width:100%;
+    font-size:13px;
 }
 
 /* 右側 */
@@ -116,6 +124,7 @@ body{
     clip-path: polygon(8% 0, 100% 0, 100% 100%, 0% 100%);
 }
 
+/* 區塊 */
 .section{
     background:white;
     padding:25px;
@@ -168,9 +177,10 @@ body{
 
 <div class="line"></div>
 
-<!-- 音樂 -->
+<!-- 🎵 音樂 -->
 <div class="music">
 <h3>背景音樂</h3>
+
 <button id="musicBtn" onclick="toggleMusic()">
 <i class="fa-solid fa-volume-xmark"></i> 開啟聲音
 </button>
