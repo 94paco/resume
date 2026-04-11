@@ -15,7 +15,7 @@ body{
     justify-content:center;
 }
 
-/* 固定寬度 */
+/* 外框 */
 .page{
     width:1100px;
     min-height:100vh;
@@ -59,13 +59,13 @@ body{
     margin:25px 0;
 }
 
-.info{ text-align:left; font-size:14px; }
-.info p{ margin:12px 0; }
-.info i{ margin-right:10px; width:20px; }
+.info{text-align:left;font-size:14px;}
+.info p{margin:12px 0;}
+.info i{margin-right:10px;width:20px;}
 
 /* 技能 */
-.skill{ text-align:left; }
-.skill-bar{ margin:10px 0; }
+.skill{text-align:left;}
+.skill-bar{margin:10px 0;}
 
 .bar{
     height:6px;
@@ -79,7 +79,13 @@ body{
     background:linear-gradient(90deg,#6dd5fa,#3498db);
 }
 
-/* 音樂 */
+/* 嗜好 */
+.hobby ul{
+    text-align:left;
+    padding-left:20px;
+}
+
+/* 音樂按鈕 */
 .music button{
     margin-top:10px;
     padding:10px 18px;
@@ -100,6 +106,7 @@ body{
     clip-path: polygon(8% 0, 100% 0, 100% 100%, 0% 100%);
 }
 
+/* 區塊 */
 .section{
     background:white;
     padding:25px;
@@ -123,9 +130,9 @@ body{
     border-left:3px solid #3498db;
 }
 
-.time{ font-size:13px; color:#888; }
-.title{ font-weight:bold; margin:5px 0; }
-.desc{ font-size:14px; color:#555; line-height:1.6; }
+.time{font-size:13px;color:#888;}
+.title{font-weight:bold;margin:5px 0;}
+.desc{font-size:14px;color:#555;line-height:1.6;}
 </style>
 </head>
 
@@ -180,20 +187,30 @@ body{
 <h3>專業技能</h3>
 
 <div class="skill-bar">
-<span>HTML5 / CSS3 版型設計</span>
+<span>HTML / CSS</span>
 <div class="bar"><div style="width:85%"></div></div>
 </div>
 
 <div class="skill-bar">
-<span>JavaScript 互動開發</span>
+<span>JavaScript</span>
 <div class="bar"><div style="width:75%"></div></div>
 </div>
 
 <div class="skill-bar">
-<span>Python 程式設計</span>
+<span>Python</span>
 <div class="bar"><div style="width:70%"></div></div>
 </div>
+</div>
 
+<div class="line"></div>
+
+<div class="hobby">
+<h3>嗜好</h3>
+<ul style="margin:0; padding-left:20px;">
+<li>🎲 桌遊</li>
+<li>📖 閱讀時事</li>
+<li>🧠 分析思維</li>
+</ul>
 </div>
 
 </div>
@@ -205,9 +222,7 @@ body{
 <h2>Professional Summary</h2>
 <div class="item">
 <div class="desc">
-具備前端網頁設計與互動功能開發能力，熟悉 HTML、CSS、JavaScript 與 Python 程式設計，
-能獨立完成網站版型規劃、UI 設計與功能實作。擅長問題分析、除錯與 Git 版本控管，
-目前就讀於亞洲大學人工智慧學系，持續精進網頁開發與系統設計能力。
+具備前端網頁設計與互動功能開發能力，熟悉 HTML、CSS、JavaScript 與 Python，能獨立完成網站設計與功能開發。
 </div>
 </div>
 </div>
@@ -218,19 +233,14 @@ body{
 <div class="item">
 <div class="time">2024 - 至今</div>
 <div class="title">亞洲大學｜人工智慧學系</div>
-<div class="desc">
-主修程式設計、網頁開發、資料結構與人工智慧基礎，培養系統化邏輯思維與問題解決能力。
-</div>
+<div class="desc">主修程式設計與AI基礎。</div>
 </div>
 
 <div class="item">
 <div class="time">2021 - 2024</div>
 <div class="title">南山高中</div>
-<div class="desc">
-資訊科技相關課程表現優異，奠定程式設計與邏輯思考基礎。
+<div class="desc">資訊科技課程表現優異。</div>
 </div>
-</div>
-
 </div>
 
 <div class="section">
@@ -238,33 +248,34 @@ body{
 
 <div class="item">
 <div class="time">2024</div>
-<div class="title">個人履歷網站設計與開發</div>
-<div class="desc">
-自行設計 UI 與版型結構，使用 HTML / CSS 完成整體頁面，
-並加入音樂播放器與互動按鈕，提升使用者體驗。
-</div>
+<div class="title">履歷網站設計</div>
+<div class="desc">完成個人網站 UI 與互動功能。</div>
 </div>
 
 <div class="item">
 <div class="time">2025</div>
-<div class="title">音樂播放器互動功能實作</div>
-<div class="desc">
-使用 JavaScript 控制 audio 播放邏輯，解決瀏覽器自動播放限制，
-實作靜音切換與使用者互動控制。
-</div>
+<div class="title">音樂播放器</div>
+<div class="desc">使用 JavaScript 控制 audio 播放。</div>
 </div>
 
 <div class="item">
 <div class="time">2025</div>
-<div class="title">GitHub 版本控管實作</div>
+<div class="title">GitHub 版本控管</div>
+<div class="desc">熟悉 commit / push / update 流程。</div>
+</div>
+</div>
+
+<!-- 個人優勢（正確位置） -->
+<div class="section">
+<h2>個人優勢</h2>
+
+<div class="item">
 <div class="desc">
-使用 Git 進行版本控制與專案管理，熟悉 commit、push 與更新流程，
-提升專案開發效率與協作能力。
+✔ 強烈的學習意願<br>
+✔ 自律且積極主動<br>
+✔ 良好的溝通表達能力<br>
+✔ 解決問題的思維模式
 </div>
-</div>
-
-</div>
-
 </div>
 
 </div>
