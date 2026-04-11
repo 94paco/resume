@@ -3,15 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <title>陳柏銨｜履歷</title>
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 body{
     margin:0;
     font-family:"Segoe UI", sans-serif;
-    display:flex;
     background:#eaeef3;
+    display:flex;
+    justify-content:center;
+}
+
+/* 🔒 固定整張履歷寬度 */
+.page{
+    width:1100px;
+    min-height:100vh;
+    display:flex;
+    box-shadow:0 0 40px rgba(0,0,0,0.15);
 }
 
 /* ===== 左側 ===== */
@@ -25,18 +33,15 @@ body{
 }
 
 .profile{
-    width:150px;
-    height:150px;
+    width:140px;
+    height:140px;
     border-radius:50%;
     border:6px solid rgba(255,255,255,0.3);
     object-fit:cover;
     margin-bottom:15px;
 }
 
-.name{
-    font-size:28px;
-    font-weight:bold;
-}
+.name{ font-size:28px; font-weight:bold; }
 
 .tag{
     display:inline-block;
@@ -53,29 +58,13 @@ body{
     margin:25px 0;
 }
 
-.info{
-    text-align:left;
-    font-size:14px;
-}
-
-.info p{
-    margin:12px 0;
-}
-
-.info i{
-    margin-right:10px;
-    width:20px;
-}
+.info{ text-align:left; font-size:14px; }
+.info p{ margin:12px 0; }
+.info i{ margin-right:10px; width:20px; }
 
 /* 技能 */
-.skill{
-    text-align:left;
-}
-
-.skill-bar{
-    margin:10px 0;
-}
-
+.skill{ text-align:left; }
+.skill-bar{ margin:10px 0; }
 .bar{
     height:6px;
     background:rgba(255,255,255,0.2);
@@ -83,43 +72,22 @@ body{
     overflow:hidden;
     margin-top:5px;
 }
-
 .bar div{
     height:100%;
     background:linear-gradient(90deg,#6dd5fa,#3498db);
 }
 
-/* 興趣 */
-.interest{
-    text-align:left;
-    font-size:14px;
-}
-
-.interest i{
-    margin-right:10px;
-    width:20px;
-}
-
-/* 音樂按鈕 */
-.music{
-    margin-top:15px;
-    text-align:left;
-}
-
+/* 音樂按鈕升級 */
 .music button{
     margin-top:10px;
-    padding:8px 16px;
+    padding:10px 18px;
     border:none;
-    border-radius:20px;
-    background:linear-gradient(45deg,#6dd5fa,#3498db);
-    color:white;
-    font-size:13px;
+    border-radius:30px;
+    background:white;
+    color:#2f3b52;
+    font-weight:bold;
     cursor:pointer;
-    transition:0.3s;
-}
-
-.music button:hover{
-    transform:scale(1.05);
+    width:100%;
 }
 
 /* ===== 右側 ===== */
@@ -153,32 +121,21 @@ body{
     border-left:3px solid #3498db;
 }
 
-.time{
-    font-size:13px;
-    color:#888;
-}
-
-.title{
-    font-weight:bold;
-    margin:5px 0;
-}
-
-.desc{
-    font-size:14px;
-    color:#555;
-}
+.time{ font-size:13px; color:#888; }
+.title{ font-weight:bold; margin:5px 0; }
+.desc{ font-size:14px; color:#555; }
 </style>
 </head>
 
 <body>
 
+<div class="page">
+
 <!-- 左側 -->
 <div class="sidebar">
 
 <img src="me.jpg" class="profile">
-
 <div class="name">陳柏銨</div>
-
 <div style="font-size:13px;opacity:0.85;margin-top:6px;">
 前端網頁設計｜程式開發｜互動功能實作
 </div>
@@ -194,11 +151,10 @@ body{
 <div class="music">
 <h3>背景音樂</h3>
 <button id="musicBtn" onclick="toggleMusic()">
-  <i class="fa-solid fa-volume-xmark"></i> 開啟聲音
+<i class="fa-solid fa-volume-xmark"></i> 開啟聲音
 </button>
-
 <audio id="bgm" autoplay loop muted>
-  <source src="MUSIC.mp3" type="audio/mpeg">
+<source src="MUSIC.mp3" type="audio/mpeg">
 </audio>
 </div>
 
@@ -214,33 +170,18 @@ body{
 
 <div class="skill">
 <h3>專業技能</h3>
-
-<p style="font-size:13px;opacity:0.9;">
-能獨立完成前端網頁設計、互動功能開發與版型設計，熟悉問題排除與使用者體驗優化。
-</p>
-
 <div class="skill-bar">
 <span>HTML / CSS</span>
 <div class="bar"><div style="width:80%"></div></div>
 </div>
-
 <div class="skill-bar">
 <span>JavaScript</span>
 <div class="bar"><div style="width:70%"></div></div>
 </div>
-
 <div class="skill-bar">
 <span>Python</span>
 <div class="bar"><div style="width:65%"></div></div>
 </div>
-</div>
-
-<div class="line"></div>
-
-<div class="interest">
-<h3>興趣</h3>
-<p><i class="fa-solid fa-chess"></i>桌遊</p>
-<p><i class="fa-solid fa-film"></i>電影</p>
 </div>
 
 </div>
@@ -250,64 +191,34 @@ body{
 
 <div class="section">
 <h2>Professional Summary</h2>
-
 <div class="item">
 <div class="desc">
-我目前就讀於亞洲大學人工智慧學系，專注於前端網頁設計與程式開發實作。熟悉 HTML、CSS 與 JavaScript，能獨立完成響應式版型、互動功能與使用者體驗優化。
-
-在專題與課程實作中，曾完成個人履歷網站與音樂播放器控制功能，過程中解決斜切版型跑版、排版錯位與瀏覽器自動播放限制等問題，培養了良好的問題分析與除錯能力。
-
-具備 Git 與 GitHub 版本控管經驗，能管理專案更新流程。對於將設計、美感與程式邏輯結合充滿興趣，期望持續精進前端開發與互動設計能力，朝專業前端工程師方向發展。
+我目前就讀於亞洲大學人工智慧學系，專注於前端網頁設計與程式開發實作，具備良好問題分析與除錯能力，並熟悉 Git 與 GitHub 版本控管流程。
 </div>
 </div>
 </div>
 
 <div class="section">
 <h2>教育經歷</h2>
-
 <div class="item">
 <div class="time">2024 - 至今</div>
 <div class="title">亞洲大學｜人工智慧學系</div>
-<div class="desc">
-在學期間專注於人工智慧與資訊科技領域，學習網頁設計、程式設計、運算思維與網路基礎，並透過實作專題培養獨立開發與問題解決能力。
 </div>
-</div>
-
 <div class="item">
 <div class="time">2021 - 2024</div>
 <div class="title">南山高中</div>
-<div class="desc">
-培養良好邏輯思維與學習基礎，奠定資訊科技與數理能力，為大學程式設計與網頁開發打下基礎。
 </div>
-</div>
-
 </div>
 
 <div class="section">
 <h2>專案與實作經歷</h2>
-
 <div class="item">
 <div class="time">2024</div>
 <div class="title">個人履歷網站設計與開發</div>
-<div class="desc">
-獨立設計並開發個人履歷網站，使用 HTML、CSS Flex 排版與 JavaScript 製作互動功能。
-解決斜切版型跑版與排版錯位問題，並實現背景音樂自動播放與控制按鈕，提升使用者體驗與視覺設計完整度。
 </div>
-</div>
-
 <div class="item">
 <div class="time">2025</div>
 <div class="title">音樂播放器互動功能實作</div>
-<div class="desc">
-透過 JavaScript 操作 Audio API，設計播放、暫停與靜音切換功能，理解瀏覽器自動播放限制並設計使用者觸發機制。
-</div>
-</div>
-
-<div class="item">
-<div class="time">2025</div>
-<div class="title">GitHub 專案管理與版本控制</div>
-<div class="desc">
-學習使用 Git 與 GitHub 進行版本控管，能處理 commit、push、專案更新與問題排除。
 </div>
 </div>
 
