@@ -1,11 +1,259 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<title>陳柏銨｜履歷</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+body{
+    margin:0;
+    font-family:"Segoe UI", sans-serif;
+    display:flex;
+    background:#eaeef3;
+}
+
+/* ===== 左側 ===== */
+.sidebar{
+    width:35%;
+    background:linear-gradient(160deg,#2f3b52,#1c2536);
+    color:white;
+    padding:40px 30px;
+    box-sizing:border-box;
+    text-align:center;
+}
+
+.profile{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    border:6px solid rgba(255,255,255,0.3);
+    object-fit:cover;
+    margin-bottom:15px;
+}
+
+.name{
+    font-size:28px;
+    font-weight:bold;
+}
+
+.tag{
+    display:inline-block;
+    margin:8px 5px;
+    padding:5px 12px;
+    background:rgba(255,255,255,0.15);
+    border-radius:20px;
+    font-size:12px;
+}
+
+.line{
+    height:1px;
+    background:rgba(255,255,255,0.2);
+    margin:25px 0;
+}
+
+.info{
+    text-align:left;
+    font-size:14px;
+}
+
+.info p{
+    margin:12px 0;
+}
+
+.info i{
+    margin-right:10px;
+    width:20px;
+}
+
+/* 技能 */
+.skill{
+    text-align:left;
+}
+
+.skill-bar{
+    margin:10px 0;
+}
+
+.bar{
+    height:6px;
+    background:rgba(255,255,255,0.2);
+    border-radius:10px;
+    overflow:hidden;
+    margin-top:5px;
+}
+
+.bar div{
+    height:100%;
+    background:linear-gradient(90deg,#6dd5fa,#3498db);
+}
+
+/* 興趣 */
+.interest{
+    text-align:left;
+    font-size:14px;
+}
+
+.interest i{
+    margin-right:10px;
+    width:20px;
+}
+
+/* 音樂按鈕 */
+.music{
+    margin-top:15px;
+    text-align:left;
+}
+
+.music button{
+    margin-top:10px;
+    padding:8px 16px;
+    border:none;
+    border-radius:20px;
+    background:linear-gradient(45deg,#6dd5fa,#3498db);
+    color:white;
+    font-size:13px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.music button:hover{
+    transform:scale(1.05);
+}
+
+/* ===== 右側 ===== */
+.main{
+    width:65%;
+    background:#f9fafc;
+    padding:50px;
+    clip-path: polygon(8% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.section{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    margin-bottom:25px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+.section h2{
+    display:inline-block;
+    background:linear-gradient(45deg,#3498db,#6dd5fa);
+    color:white;
+    padding:6px 18px;
+    border-radius:20px;
+    font-size:15px;
+}
+
+.item{
+    margin-top:15px;
+    padding-left:10px;
+    border-left:3px solid #3498db;
+}
+
+.time{
+    font-size:13px;
+    color:#888;
+}
+
+.title{
+    font-weight:bold;
+    margin:5px 0;
+}
+
+.desc{
+    font-size:14px;
+    color:#555;
+}
+</style>
+</head>
+
+<body>
+
+<!-- 左側 -->
+<div class="sidebar">
+
+<img src="me.jpg" class="profile">
+
+<div class="name">陳柏銨</div>
+
+<div style="font-size:13px;opacity:0.85;margin-top:6px;">
+前端網頁設計｜程式開發｜互動功能實作
+</div>
+
+<div>
+<span class="tag">台灣</span>
+<span class="tag">大學生</span>
+<span class="tag">114022017</span>
+</div>
+
+<div class="line"></div>
+
+<div class="music">
+<h3>背景音樂</h3>
+<button id="musicBtn" onclick="toggleMusic()">
+  <i class="fa-solid fa-volume-xmark"></i> 開啟聲音
+</button>
+
+<audio id="bgm" autoplay loop muted>
+  <source src="MUSIC.mp3" type="audio/mpeg">
+</audio>
+</div>
+
+<div class="line"></div>
+
+<div class="info">
+<p><i class="fa-solid fa-phone"></i>0912-345-678</p>
+<p><i class="fa-solid fa-envelope"></i>114022017@live.asia.edu.tw</p>
+<p><i class="fa-solid fa-location-dot"></i>台灣</p>
+</div>
+
+<div class="line"></div>
+
+<div class="skill">
+<h3>專業技能</h3>
+
+<p style="font-size:13px;opacity:0.9;">
+能獨立完成前端網頁設計、互動功能開發與版型設計，熟悉問題排除與使用者體驗優化。
+</p>
+
+<div class="skill-bar">
+<span>HTML / CSS</span>
+<div class="bar"><div style="width:80%"></div></div>
+</div>
+
+<div class="skill-bar">
+<span>JavaScript</span>
+<div class="bar"><div style="width:70%"></div></div>
+</div>
+
+<div class="skill-bar">
+<span>Python</span>
+<div class="bar"><div style="width:65%"></div></div>
+</div>
+</div>
+
+<div class="line"></div>
+
+<div class="interest">
+<h3>興趣</h3>
+<p><i class="fa-solid fa-chess"></i>桌遊</p>
+<p><i class="fa-solid fa-film"></i>電影</p>
+</div>
+
+</div>
+
+<!-- 右側 -->
+<div class="main">
+
 <div class="section">
 <h2>Professional Summary</h2>
 
 <div class="item">
 <div class="desc">
-我目前就讀於
-:contentReference[oaicite:0]{index=0}
-人工智慧學系，專注於前端網頁設計與程式開發實作。熟悉 HTML、CSS 與 JavaScript，能獨立完成響應式版型、互動功能與使用者體驗優化。
+我目前就讀於亞洲大學人工智慧學系，專注於前端網頁設計與程式開發實作。熟悉 HTML、CSS 與 JavaScript，能獨立完成響應式版型、互動功能與使用者體驗優化。
 
 在專題與課程實作中，曾完成個人履歷網站與音樂播放器控制功能，過程中解決斜切版型跑版、排版錯位與瀏覽器自動播放限制等問題，培養了良好的問題分析與除錯能力。
 
@@ -13,3 +261,75 @@
 </div>
 </div>
 </div>
+
+<div class="section">
+<h2>教育經歷</h2>
+
+<div class="item">
+<div class="time">2024 - 至今</div>
+<div class="title">亞洲大學｜人工智慧學系</div>
+<div class="desc">
+在學期間專注於人工智慧與資訊科技領域，學習網頁設計、程式設計、運算思維與網路基礎，並透過實作專題培養獨立開發與問題解決能力。
+</div>
+</div>
+
+<div class="item">
+<div class="time">2021 - 2024</div>
+<div class="title">南山高中</div>
+<div class="desc">
+培養良好邏輯思維與學習基礎，奠定資訊科技與數理能力，為大學程式設計與網頁開發打下基礎。
+</div>
+</div>
+
+</div>
+
+<div class="section">
+<h2>專案與實作經歷</h2>
+
+<div class="item">
+<div class="time">2024</div>
+<div class="title">個人履歷網站設計與開發</div>
+<div class="desc">
+獨立設計並開發個人履歷網站，使用 HTML、CSS Flex 排版與 JavaScript 製作互動功能。
+解決斜切版型跑版與排版錯位問題，並實現背景音樂自動播放與控制按鈕，提升使用者體驗與視覺設計完整度。
+</div>
+</div>
+
+<div class="item">
+<div class="time">2025</div>
+<div class="title">音樂播放器互動功能實作</div>
+<div class="desc">
+透過 JavaScript 操作 Audio API，設計播放、暫停與靜音切換功能，理解瀏覽器自動播放限制並設計使用者觸發機制。
+</div>
+</div>
+
+<div class="item">
+<div class="time">2025</div>
+<div class="title">GitHub 專案管理與版本控制</div>
+<div class="desc">
+學習使用 Git 與 GitHub 進行版本控管，能處理 commit、push、專案更新與問題排除。
+</div>
+</div>
+
+</div>
+
+</div>
+
+<script>
+const music = document.getElementById("bgm");
+const btn = document.getElementById("musicBtn");
+
+function toggleMusic(){
+    if(music.muted){
+        music.muted = false;
+        music.play();
+        btn.innerHTML = '<i class="fa-solid fa-volume-high"></i> 靜音';
+    }else{
+        music.muted = true;
+        btn.innerHTML = '<i class="fa-solid fa-volume-xmark"></i> 開啟聲音';
+    }
+}
+</script>
+
+</body>
+</html>
