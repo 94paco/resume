@@ -347,6 +347,7 @@ body.dark .desc{
 const music = document.getElementById("bgm");
 const btn = document.getElementById("musicBtn");
 
+/* 🎵 音樂控制 */
 function toggleMusic(){
     if(music.muted){
         music.muted = false;
@@ -356,6 +357,11 @@ function toggleMusic(){
         music.muted = true;
         btn.innerHTML = '<i class="fa-solid fa-volume-xmark"></i> 開啟聲音';
     }
+}
+
+/* 🌙 黑色模式 */
+function toggleDark(){
+    document.body.classList.toggle("dark");
 }
 </script>
 
