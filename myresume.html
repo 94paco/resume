@@ -13,9 +13,15 @@ body{
     background:#eaeef3;
     display:flex;
     justify-content:center;
+    transition:0.3s;
 }
 
-/* 固定寬度 */
+/* Dark mode */
+body.dark{
+    background:#111827;
+    color:white;
+}
+
 .page{
     width:1100px;
     min-height:100vh;
@@ -59,13 +65,12 @@ body{
     margin:25px 0;
 }
 
-.info{ text-align:left; font-size:14px; }
-.info p{ margin:12px 0; }
-.info i{ margin-right:10px; width:20px; }
+.info{text-align:left;font-size:14px;}
+.info p{margin:12px 0;}
+.info i{margin-right:10px;width:20px;}
 
-/* 技能 */
-.skill{ text-align:left; }
-.skill-bar{ margin:10px 0; }
+.skill{text-align:left;}
+.skill-bar{margin:10px 0;}
 
 .bar{
     height:6px;
@@ -79,8 +84,8 @@ body{
     background:linear-gradient(90deg,#6dd5fa,#3498db);
 }
 
-/* 音樂 */
-.music button{
+/* 按鈕 */
+button{
     margin-top:10px;
     padding:10px 18px;
     border:none;
@@ -123,9 +128,16 @@ body{
     border-left:3px solid #3498db;
 }
 
-.time{ font-size:13px; color:#888; }
-.title{ font-weight:bold; margin:5px 0; }
-.desc{ font-size:14px; color:#555; line-height:1.6; }
+.time{font-size:13px;color:#888;}
+.title{font-weight:bold;margin:5px 0;}
+.desc{font-size:14px;color:#555;line-height:1.6;}
+
+/* dark mode card */
+body.dark .section{
+    background:#1f2937;
+    color:white;
+}
+body.dark .desc{color:#ddd;}
 </style>
 </head>
 
@@ -153,7 +165,6 @@ body{
 <div class="line"></div>
 
 <!-- 音樂 -->
-<div class="music">
 <h3>背景音樂</h3>
 <button id="musicBtn" onclick="toggleMusic()">
 <i class="fa-solid fa-volume-xmark"></i> 開啟聲音
@@ -162,7 +173,6 @@ body{
 <audio id="bgm" autoplay loop muted>
 <source src="MUSIC.mp3" type="audio/mpeg">
 </audio>
-</div>
 
 <div class="line"></div>
 
@@ -175,25 +185,30 @@ body{
 
 <div class="line"></div>
 
+<button onclick="toggleDark()">
+<i class="fa-solid fa-moon"></i> 深色模式切換
+</button>
+
+<div class="line"></div>
+
 <!-- 技能 -->
 <div class="skill">
 <h3>專業技能</h3>
 
 <div class="skill-bar">
-<span>HTML5 / CSS3 版型設計</span>
+<span>HTML / CSS</span>
 <div class="bar"><div style="width:85%"></div></div>
 </div>
 
 <div class="skill-bar">
-<span>JavaScript 互動開發</span>
+<span>JavaScript</span>
 <div class="bar"><div style="width:75%"></div></div>
 </div>
 
 <div class="skill-bar">
-<span>Python 程式設計</span>
+<span>Python</span>
 <div class="bar"><div style="width:70%"></div></div>
 </div>
-
 </div>
 
 </div>
@@ -205,9 +220,7 @@ body{
 <h2>Professional Summary</h2>
 <div class="item">
 <div class="desc">
-具備前端網頁設計與互動功能開發能力，熟悉 HTML、CSS、JavaScript 與 Python 程式設計，
-能獨立完成網站版型規劃、UI 設計與功能實作。擅長問題分析、除錯與 Git 版本控管，
-目前就讀於亞洲大學人工智慧學系，持續精進網頁開發與系統設計能力。
+具備前端網頁設計與互動開發能力，熟悉 HTML、CSS、JavaScript 與 Python，能獨立完成網站設計與功能開發。
 </div>
 </div>
 </div>
@@ -218,55 +231,45 @@ body{
 <div class="item">
 <div class="time">2024 - 至今</div>
 <div class="title">亞洲大學｜人工智慧學系</div>
-<div class="desc">
-主修程式設計、網頁開發、資料結構與人工智慧基礎，培養系統化邏輯思維與問題解決能力。
-</div>
+<div class="desc">主修程式設計與AI基礎。</div>
 </div>
 
 <div class="item">
 <div class="time">2021 - 2024</div>
 <div class="title">南山高中</div>
-<div class="desc">
-資訊科技相關課程表現優異，奠定程式設計與邏輯思考基礎。
+<div class="desc">資訊科技課程表現優異。</div>
 </div>
 </div>
 
+<!-- 個人優勢（修正後獨立區塊） -->
+<div class="section">
+<h2>個人優勢</h2>
+<ul>
+<li>強烈的學習意願</li>
+<li>自律且積極主動</li>
+<li>良好的溝通表達能力</li>
+<li>解決問題的思維模式</li>
+<li>積極進取的態度</li>
+</ul>
 </div>
 
 <div class="section">
-<h2>專案與實作經歷</h2>
+<h2>專案經歷</h2>
 
 <div class="item">
 <div class="time">2024</div>
-<div class="title">個人履歷網站設計與開發</div>
-<div class="desc">
-自行設計 UI 與版型結構，使用 HTML / CSS 完成整體頁面，
-並加入音樂播放器與互動按鈕，提升使用者體驗。
-</div>
+<div class="title">履歷網站設計</div>
+<div class="desc">完成個人網站 UI 與互動功能。</div>
 </div>
 
 <div class="item">
 <div class="time">2025</div>
-<div class="title">音樂播放器互動功能實作</div>
-<div class="desc">
-使用 JavaScript 控制 audio 播放邏輯，解決瀏覽器自動播放限制，
-實作靜音切換與使用者互動控制。
-</div>
-</div>
-
-<div class="item">
-<div class="time">2025</div>
-<div class="title">GitHub 版本控管實作</div>
-<div class="desc">
-使用 Git 進行版本控制與專案管理，熟悉 commit、push 與更新流程，
-提升專案開發效率與協作能力。
+<div class="title">音樂播放器</div>
+<div class="desc">使用 JavaScript 控制 audio 播放。</div>
 </div>
 </div>
 
 </div>
-
-</div>
-
 </div>
 
 <script>
@@ -282,6 +285,10 @@ function toggleMusic(){
         music.muted = true;
         btn.innerHTML = '<i class="fa-solid fa-volume-xmark"></i> 開啟聲音';
     }
+}
+
+function toggleDark(){
+    document.body.classList.toggle("dark");
 }
 </script>
 
