@@ -13,6 +13,13 @@ body{
     background:#eaeef3;
     display:flex;
     justify-content:center;
+    transition:0.3s;
+}
+
+/* 🌙 黑色模式 */
+body.dark{
+    background:#0f141c;
+    color:#e5e7eb;
 }
 
 /* 外框 */
@@ -31,6 +38,10 @@ body{
     padding:40px 30px;
     box-sizing:border-box;
     text-align:center;
+}
+
+body.dark .sidebar{
+    background:linear-gradient(160deg,#111827,#0b0f16);
 }
 
 .profile{
@@ -79,31 +90,7 @@ body{
     background:linear-gradient(90deg,#6dd5fa,#3498db);
 }
 
-/* 嗜好 */
-.hobby{
-    text-align:left;
-}
-
-.hobby h3{
-    font-size:16px;
-    margin-bottom:8px;
-}
-
-.hobby ul{
-    margin:0;
-    padding-left:20px;
-}
-
-/* 🎵 音樂（縮小版） */
-.music{
-    text-align:left;
-}
-
-.music h3{
-    font-size:16px;
-    margin:0 0 8px 0;
-}
-
+/* 音樂 */
 .music button{
     padding:8px 12px;
     border:none;
@@ -116,12 +103,30 @@ body{
     font-size:13px;
 }
 
+/* 🌙 黑色模式按鈕 */
+.darkBtn{
+    margin-top:10px;
+    padding:8px 12px;
+    border:none;
+    border-radius:20px;
+    background:#111;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+    width:100%;
+}
+
 /* 右側 */
 .main{
     width:65%;
     background:#f9fafc;
     padding:50px;
     clip-path: polygon(8% 0, 100% 0, 100% 100%, 0% 100%);
+    transition:0.3s;
+}
+
+body.dark .main{
+    background:#111827;
 }
 
 /* 區塊 */
@@ -131,6 +136,11 @@ body{
     border-radius:12px;
     margin-bottom:25px;
     box-shadow:0 5px 20px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+body.dark .section{
+    background:#1f2937;
 }
 
 .section h2{
@@ -149,8 +159,18 @@ body{
 }
 
 .time{font-size:13px;color:#888;}
+
 .title{font-weight:bold;margin:5px 0;}
-.desc{font-size:14px;color:#555;line-height:1.6;}
+
+.desc{
+    font-size:14px;
+    color:#555;
+    line-height:1.6;
+}
+
+body.dark .desc{
+    color:#d1d5db;
+}
 </style>
 </head>
 
@@ -179,10 +199,14 @@ body{
 
 <!-- 🎵 音樂 -->
 <div class="music">
-<h3>背景音樂</h3>
 
 <button id="musicBtn" onclick="toggleMusic()">
 <i class="fa-solid fa-volume-xmark"></i> 開啟聲音
+</button>
+
+<!-- 🌙 黑色模式 -->
+<button class="darkBtn" onclick="toggleDark()">
+🌙 切換黑色模式
 </button>
 
 <audio id="bgm" autoplay loop muted>
